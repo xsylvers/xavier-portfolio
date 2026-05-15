@@ -5,12 +5,22 @@ import Image from "next/image";
 export default function Projects() {
   const projects = [
     {
-      title: "Voice2Blog / Voice-to-Portfolio",
-      description: "An AI-powered workflow platform that transforms spoken input into structured, publish-ready web content using transcription and AI-assisted formatting workflows.",
-      tags: ["Speech-to-Text", "OpenAI API", "Automated Publishing", "GitHub Workflow", "Next.js UI"],
-      github: "#",
-      demo: "#",
-      type: "Full Stack Platform"
+      title: "AI Search Performance Dashboard",
+      description: "A professional AI analytics dashboard inspired by real AI Search Analyst workflows. Visualizes KPI reporting, AI visibility tracking, prompt performance, workflow automation concepts, and resume analysis insights across platforms like ChatGPT, Gemini, Claude, and Perplexity.",
+      tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vitest", "KPI Reporting", "Data Visualization", "Workflow Automation"],
+      github: "https://github.com/xsylvers/IS-322-Resume-Analysis-Job-Technology-Final-Project",
+      demo: "https://is-322-resume-analysis-job-technology-final-project.vercel.app/",
+      type: "AI ANALYTICS PLATFORM",
+      image: "/project-ai-dashboard.png"
+    },
+    {
+      title: "Voice2Website",
+      description: "Describe your website, and let AI build it instantly. An AI-assisted voice and text-to-website platform that converts spoken or typed ideas into dynamically generated web content and website previews.",
+      tags: ["HTML", "CSS", "JavaScript", "Python", "Speech-to-Text", "Workflow Automation", "AI Publishing", "Web Generation"],
+      github: "PASTE_VOICE2WEBSITE_GITHUB_LINK_HERE",
+      demo: "PASTE_VOICE2WEBSITE_LIVE_LINK_HERE",
+      type: "AI AUTOMATION PLATFORM",
+      image: "/project-voice2website.png"
     },
     {
       title: "Terrific Travels",
@@ -27,15 +37,8 @@ export default function Projects() {
       tags: ["PHP", "MySQL", "RabbitMQ", "Linux", "systemd", "Git/GitHub", "Backend Authentication", "Systems Integration"],
       github: "#",
       demo: "#",
-      type: "Systems Integration"
-    },
-    {
-      title: "AI Toolkit — Blog Publisher MVP",
-      description: "A Python desktop MVP for experimenting with AI-assisted publishing workflows. Converts transcript input into publish-ready Markdown blog content via local local Ollama models.",
-      tags: ["Python", "Tkinter GUI", "Transcript-to-Markdown", "Local AI (Ollama)", "GitHub Pages Automation"],
-      github: "#",
-      demo: "#",
-      type: "Desktop Prototype"
+      type: "Systems Integration",
+      image: "/project-terrific-travels.png"
     },
     {
       title: "AI-Assisted Calculator",
@@ -43,7 +46,8 @@ export default function Projects() {
       tags: ["C#", "Console App", "Local LLMs", "AI-Assisted Coding", "Prompt Engineering"],
       github: "#",
       demo: "#",
-      type: "AI Experiment"
+      type: "AI Experiment",
+      image: "/project-calculator.png"
     }
   ];
 
@@ -60,11 +64,15 @@ export default function Projects() {
         <div className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="group flex flex-col bg-card rounded-xl border border-border overflow-hidden hover:border-primary/50 transition-colors">
-              <div className="h-48 bg-zinc-900 relative border-b border-border flex items-center justify-center p-6">
-                {/* Placeholder Mockup */}
-                <div className="w-full h-full bg-zinc-800 rounded-lg border border-zinc-700 flex items-center justify-center shadow-inner">
-                  <span className="text-zinc-500 font-mono text-sm">[Project Mockup Placeholder]</span>
-                </div>
+              <div className="h-64 bg-zinc-900 relative border-b border-border overflow-hidden">
+                <Image 
+                  src={project.image} 
+                  alt={project.title}
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  priority={index < 2}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               
               <div className="p-6 flex flex-col flex-grow">

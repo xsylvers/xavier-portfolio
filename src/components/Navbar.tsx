@@ -15,13 +15,23 @@ export default function Navbar() {
           <Link href="#skills" className="hover:text-primary transition-colors">Skills</Link>
           <Link href="#ai-workflow" className="hover:text-primary transition-colors">AI Workflow</Link>
         </nav>
-        <div className="flex items-center gap-4 text-foreground/70">
-          <Link href="https://github.com/xsylvers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-            <FaGithub className="w-5 h-5" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/xavier-sylvers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-            <FaLinkedin className="w-5 h-5" />
-          </Link>
+        <div className="flex items-center gap-6">
+          <div className="hidden sm:flex items-center gap-4 text-foreground/70">
+            <Link href="https://github.com/xsylvers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <FaGithub className="w-5 h-5" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/xavier-sylvers" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <FaLinkedin className="w-5 h-5" />
+            </Link>
+          </div>
+          <a 
+            href="/resume/Xavier_Sylvers_Resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-4 py-1.5 bg-primary/10 text-primary border border-primary/20 rounded-full text-xs font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </header>
