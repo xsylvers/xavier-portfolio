@@ -40,6 +40,6 @@ npm run build
 **Note**: Since image optimization is disabled for static export, all images should ideally be optimized before placing them in the `public` folder.
 
 ## Links
-- **Hosted Site**: [Placeholder Link - Add your URL here]
+- **Hosted Site**: https://xavier-portfolio-umber.vercel.app/
 - **GitHub**: [https://github.com/xsylvers](https://github.com/xsylvers)
 - **LinkedIn**: [https://www.linkedin.com/in/xavier-sylvers](https://www.linkedin.com/in/xavier-sylvers)
